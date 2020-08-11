@@ -1,0 +1,15 @@
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+    <p>{{ name }}  | ({{ age }})</p>
+    <p>{{ age * 3 }} - {{ ageMultiply3() }}</p>
+    <p>{{ Math.random() }} - {{ random() }}</p>  
+    <div>
+        <img v-bind:src="image" height="200">
+    </div>
+    <hr>
+    <div>
+        <input type="text" v-bind:value="name">
+    </div>
+</div>
+<script src="app.js"></script>

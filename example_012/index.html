@@ -1,0 +1,18 @@
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+    <div>
+        <button v-on:click="showAlert">Show Alert</button>
+    </div>
+
+    <div>
+        <input type="text" v-on:keyup="value = $event.target.value">
+        <p>{{ value }}</p>
+    </div>
+
+    <div>
+        <input type="text" v-on:keydown.enter="updatedValue">
+        <p>{{ value }}</p>
+    </div>
+</div>
+<script src="app.js"></script>

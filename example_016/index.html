@@ -1,0 +1,23 @@
+<div id="app">
+    <p> {{ count }}</p>
+    <button @click="plus">Plus</button>
+    <hr>
+    <input type="text" :value="count">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            count:0
+        },
+        methods:{
+            plus(event){
+                this.count++;
+            }
+        }
+    })
+</script>

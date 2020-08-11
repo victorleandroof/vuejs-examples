@@ -1,0 +1,21 @@
+<div id="app">
+    <input type="text" v-on:input="updatedTitle"/>
+    <p> {{ title }}</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            title:'Hello World!!!'
+        },
+        methods:{
+            updatedTitle(event){
+                this.title = event.target.value
+            }
+        }
+    })
+</script>

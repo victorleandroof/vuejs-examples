@@ -1,0 +1,27 @@
+<div id="app">
+    <p v-once> {{ title }}</p>
+    <p> {{ greetings() }}</p>
+    <a v-bind:href="link"> Website </a>
+    <hr>
+    <p v-html="linkHtml"></p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            title:'Hello World!!!',
+            link: 'https://www.victorleandro.com.br',
+            linkHtml: '<a href="https://www.victorleandro.com.br"> Website </a>'
+        },
+        methods:{
+            greetings(){
+                this.title = 'test'
+                return 'Welcome!!'
+            }
+        }
+    })
+</script>
